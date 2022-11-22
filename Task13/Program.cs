@@ -7,14 +7,14 @@
 Console.Write("Введите целое число, чтобы узнать третью цифру этого числа: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int ThirdDigit (int num)
+int ThirdDigit(int num)
 {
-int numAbs = Math.Abs(num);
-if (numAbs<100) return -1;
-while (numAbs>1000) numAbs = numAbs/10;
-return numAbs%10;
+    int numAbs = Math.Abs(num);
+    if (numAbs < 100) return -1;
+    while (numAbs > 999) numAbs = numAbs / 10;
+    return numAbs % 10;
 }
 
-int result = ThirdDigit (number);
+int result = ThirdDigit(number);
 if (result == -1) Console.WriteLine("Нет третьей цифры");
 else Console.WriteLine($"Третья цифра: {result}");
